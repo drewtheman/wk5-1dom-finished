@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<!--Week 4 assignment, UAT Space Program - We Have SOUND!
+Assignment: UAT Space Program - We Have SOUND!
+Andrew Keenan
+andrewforavon@rocketmail.com-->
+<html>
+
+<head>
+    <script src="launchDataDis.js"></script>
+    <script src="dataLoader-1.js"></script>
+    <script src="code.js"></script>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <title>
+        Andrew Keenan's UATSpace page
+        </title>
+        <script>
+            var theTime = new Date();
+            var time_interval = 5000;
+            var last_iteration = 0;
+            var running = true;
+            var index = 0;
+            var timer;
+            var data = getData();
+        </script>
+</head>
+
+<body>
+    <!--Table to hold UAT Space logo and text-->
+    <table>
+        <tr>
+            <td><img src="UATspaceLogo-2.jpg"></td>
+            <td>
+                <h1>
+                    UAT Space Program
+                </h1>
+            </td>
+        </tr>
+    </table>
+    
+    <!--data table-->
+    <table id="data" border="2" width="70%">
+        <col style="width: 35%">
+        <col style="width: 35%">
+        <thead>
+            <th>
+                Data type
+            </th>
+            <th>
+                Reading
+            </th>
+        </thead>
+        <tbody>
+            <!--table entry for time elapsed-->
+            <tr id="seconds">
+            </tr>
+            <!--table entry for latitude-->
+            <tr id="latitude">
+            </tr>
+            <!--table entry for longitude-->
+            <tr id="longitude">
+            </tr>
+            <!--table entry for altitude-->
+            <tr id="gps_altitude">
+            </tr>
+            <!--table entry for bmp altitude-->
+            <tr id="bmp_altitude">
+            </tr>
+            <!--table entry for bmp pressure-->
+            <tr id="bmp_pressure">
+            </tr>
+            <!--table entry for bmp temperature-->
+            <tr id="bmp_temperature">
+            </tr>
+            <!--table entry for dig temperature-->
+            <tr id="dig_temperature">
+            </tr>
+            <!--table entry for css temperature-->
+            <tr id="css_temperature">
+            </tr>
+            <!--table entry for css ec02-->
+            <tr id="css_ec02">
+            </tr>
+            <!--table entry for css tvoc-->
+            <tr id="css_TVOC">
+            </tr>
+            <!--table entry for uv-->
+            <tr id="UV">
+            </tr>
+            <!--table entry for accel x-->
+            <tr id="accelX">
+            </tr>
+            <!--table entry for accel y-->
+            <tr id="accelY">
+            </tr>
+            <!--table entry for accel z-->
+            <tr id="accelZ">
+            </tr>
+            <!--table entry for magnetic x-->
+            <tr id="magneticX">
+            </tr>
+            <!--table entry for magnetic y-->
+            <tr id="magneticY">
+            </tr>
+            <!--table entry for magnetic z-->
+            <tr id="magneticZ">
+            </tr>
+            <!--table entry for gyro x-->
+            <tr id="gyroX">
+            </tr>
+            <!--table entry for gyro y-->
+            <tr id="gyroY">
+            </tr>
+            <!--table entry for gyro z-->
+            <tr id="gyroZ">
+            </tr>
+        </tbody>
+
+    </table>
+    <br>
+    <!--button to run the timer-->
+    <button onclick="startfun();" class="button" id="startButton">start</button>
+    <!--button to stop the timer-->
+    <button onclick="stopfun();"class="button" id="stopButton">stop</button><br><br>
+    <br>
+    The current time is: <div id="clockTime">Press start to display current time</div>
+    <!--
+        for our craps game on the html side, we need:
+        1. button to play craps
+        2. Crap status line
+        3. Header saying craps played here
+
+    Craps would be played, to help draw awareness to the Space program.
+    As a way to demonstrate that there are more things to do other then work all the time.
+    It also helps to keep the minds of the astronauts sharp for their duties.
+    Also to show that they can also have a little bit of fun on the side of their daily duties.
+    -->
+    <h2>Please try your hand at craps!</h2>
+
+    <div id="crapsStatus">Craps Status</div><br>
+    <button onclick="playcraps();"class="button">Play Craps</button><br>
+    <br>
+    <br>
+    <h3>Play space station sounds</h3>
+    <h4>Warning it may get loud</h4>
+    
+    <button class="lgButton" onclick="playStation();">Play space station sounds</button>
+    
+    <button class="lgButton" style="margin:30px;" onclick="playBowie();">Play David <br> Bowie</button>
+    
+</body>
+
+</html>
